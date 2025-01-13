@@ -4,9 +4,12 @@ import 'package:fashion_app/src/auth/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../src/categories/views/categories_screen.dart';
+import '../../src/categories/views/category_page.dart';
 import '../../src/entrypoint/views/entrypoint.dart';
 import '../../src/notification/views/notification_screen.dart';
 import '../../src/onboarding/views/onboaring_page.dart';
+import '../../src/products/views/products_screen.dart';
 import '../../src/search/views/search_screen.dart';
 import '../../src/splashscreen/views/splashscreen_page.dart';
 
@@ -64,15 +67,16 @@ final GoRouter _router = GoRouter(
       path: '/register',
       builder: (context, state) => const RegistrationPage(),
     ),
+    */
     GoRoute(
       path: '/categories',
       builder: (context, state) => const CategoriesPage(),
     ),
-     GoRoute(
+    GoRoute(
       path: '/category',
       builder: (context, state) => const CategoryPage(),
     ),
-
+/*
     GoRoute(
       path: '/addaddress',
       builder: (context, state) => const AddAddress(),
@@ -107,14 +111,14 @@ final GoRouter _router = GoRouter(
       path: '/failed',
       builder: (context, state) => const FailedPayment(),
     ),
-
+*/
     GoRoute(
       path: '/product/:id',
       builder: (BuildContext context, GoRouterState state) {
         final productId = state.pathParameters['id'];
         return ProductPage(productId: productId.toString());
       },
-    ), */
+    ),
   ],
 );
 

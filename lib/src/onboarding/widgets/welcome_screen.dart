@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(
               height: 20.h,
             ),
-            GradientBtn(
+            CustomButton(
               text: AppText.kGetStarted,
               btnHieght: 35,
               radius: 20,
@@ -83,7 +83,7 @@ class WelcomeScreen extends StatelessWidget {
                   onPressed: () {
                     context.go('/login');
                   },
-                  child: Text(
+                  child: const Text(
                     "Sign In",
                     style: TextStyle(
                       fontSize: 12,

@@ -36,14 +36,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             onPageChanged: (page) {
               context.read<OnboardingNotifier>().setSelectedPage = page;
             },
-            children: [
+            children: const [
               OnboardingScreenOne(),
               OnboardingScreenTwo(),
               WelcomeScreen(),
             ],
           ),
           context.watch<OnboardingNotifier>().selectedPage == 2
-              ? SizedBox.shrink()
+              ? const SizedBox.shrink()
               : Positioned(
                   bottom: 50.h,
                   child: Container(
@@ -56,7 +56,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         context.watch<OnboardingNotifier>().selectedPage == 0
-                            ? SizedBox(
+                            ? const SizedBox(
                                 width: 25,
                               )
                             : GestureDetector(
@@ -70,7 +70,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                           const Duration(milliseconds: 200),
                                       curve: Curves.easeIn);
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   AntDesign.leftcircleo,
                                   color: Kolors.kPrimary,
                                   size: 30,
@@ -106,7 +106,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                 duration: const Duration(milliseconds: 200),
                                 curve: Curves.easeIn);
                           },
-                          child: Icon(
+                          child: const Icon(
                             AntDesign.rightcircleo,
                             color: Kolors.kPrimary,
                             size: 30,

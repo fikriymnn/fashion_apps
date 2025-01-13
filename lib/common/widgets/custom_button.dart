@@ -5,8 +5,8 @@ import '../utils/kcolors.dart';
 import 'app_style.dart';
 import 'reusable_text.dart';
 
-class GradientBtn extends StatelessWidget {
-  const GradientBtn({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     this.onTap,
     this.btnWidth,

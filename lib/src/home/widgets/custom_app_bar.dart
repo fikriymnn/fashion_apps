@@ -54,11 +54,11 @@ class CustomAppBar extends StatelessWidget {
           ),
         ],
       ),
-      actions: [
+      actions: const [
         NotificationWidget(),
       ],
       bottom: PreferredSize(
-        preferredSize: Size.fromHeight(55),
+        preferredSize: const Size.fromHeight(55),
         child: GestureDetector(
           onTap: () {
             context.push('/search');
