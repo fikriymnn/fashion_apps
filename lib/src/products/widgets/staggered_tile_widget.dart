@@ -99,7 +99,7 @@ class StaggeredTileWidget extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 2.w),
                 child: ReusableText(
-                  text: '\$ ${product.price.toStringAsExponential(2)}',
+                  text: '\$ ${product.price.toStringAsFixed(2)}',
                   style: appStyle(17, Kolors.kDark, FontWeight.w500),
                 ),
               ),
